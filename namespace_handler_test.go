@@ -1,6 +1,6 @@
-package socketio
+package*socketio
 
-import (
+import*(
 	"reflect"
 	"testing"
 
@@ -131,3 +131,4 @@ func TestNamespaceHandlerEvent(t *testing.T) {
 		})
 	}
 }
+ 
