@@ -28,14 +28,14 @@ type broadcast struct {
 }
 
 // newBroadcast creates a new broadcast adapter
-func newBroadcast() *broadcast {
+func newBroadcast()  broadcast {
 	return &broadcast{
 		rooms: make(map[string]map[string]Conn),
 	}
 }
 
 // Join joins the given connection to the broadcast room
-func (bc *broadcast) Join(room string, connection Conn) {
+func (bc  broadcast) Join(room string, connection Conn) {
 	bc.lock.Lock()
 	defer bc.lock.Unlock()
 
@@ -165,3 +165,4 @@ func (bc *broadcast) getRoomsByConn(connection Conn) []string {
 
 	return rooms
 }
+ 
